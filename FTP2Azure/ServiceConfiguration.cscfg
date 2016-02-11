@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="Marketplace.Azure.Ftp" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="FTPServerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <!-- Configure your diagnostic store -->
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="" />
+      <!-- Azure Storage Account  -->
+      <Setting name="StorageAccount" value="DefaultEndpointsProtocol=https;AccountName=rbzmerchants;AccountKey=gR2AIhLxWZAXpAaaCFwQzRdSot1BeJGtu9ISQWPNUvB+r7qAKqpibOPUCTphzfo7z2velPEx9gzNchK/v8NSZA==" />
+      <!-- Ftp server site, used to get its ipv4 ip, e.g. xxx.cloudapp.net-->
+      <Setting name="FtpServerHost" value="rbzftp.cloudapp.net" />
+      <!-- Mode="Debug", use development storage; Mode="Live", use azure storage-->
+      <Setting name="Mode" value="Live" />
+      <!-- Max number of concurrent clients -->
+      <Setting name="MaxClients" value="10" />
+      <!-- Ftp Server Account Management -->
+      <!-- Format: name="FtpAccount", value="(username1:password1)(username2:password2)..." -->
+      <!-- Username will be used as container name in Azure Blob, password must not contain ')' -->
+      <Setting name="FtpAccount" value="(11921:b4and0fFfTp)" />
+      <!-- No need to edit these unless specifically required (reserved for future use) -->
+      <Setting name="ConnectionEncoding" value="UTF8" />
+      <Setting name="MaxIdleSeconds" value="60" />
+      <Setting name="QueueNotification" value="false" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

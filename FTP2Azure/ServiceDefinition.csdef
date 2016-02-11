@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="Marketplace.Azure.Ftp" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WorkerRole name="FTPServerRole">
+    <Endpoints>
+      <InputEndpoint name="FTP" port="21" protocol="tcp" />
+      <InputEndpoint name="FTPPASV" protocol="tcp" port="59860" />
+    </Endpoints>
+    <ConfigurationSettings>
+      <Setting name="StorageAccount" />
+      <Setting name="Mode" />
+      <Setting name="ConnectionEncoding" />
+      <Setting name="FtpAccount" />
+      <Setting name="MaxClients" />
+      <Setting name="FtpServerHost" />
+      <Setting name="QueueNotification" />
+      <Setting name="MaxIdleSeconds" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+    </ConfigurationSettings>
+    <Imports></Imports>
+  </WorkerRole>
+</ServiceDefinition>
