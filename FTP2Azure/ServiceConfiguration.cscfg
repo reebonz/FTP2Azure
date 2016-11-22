@@ -6,7 +6,7 @@
       <!-- Configure your diagnostic store -->
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="" />
       <!-- Azure Storage Account  -->
-      <Setting name="StorageAccount" value="DefaultEndpointsProtocol=https;AccountName=rbzmerchants;AccountKey=" />
+      <Setting name="StorageAccount" value="DefaultEndpointsProtocol=https;AccountName=rbzmerchants;AccountKey=1z4N5fIE+9WS+hAemrvpDeiUXFXd5X0z78kZ/x6lDEka7UMtpCAiBzjU9GKOqDcdpe4WUu9Hgb3rUANQRMsmHw==" />
       <!-- Ftp server site, used to get its ipv4 ip, e.g. xxx.cloudapp.net-->
       <Setting name="FtpServerHost" value="rbzftp.cloudapp.net" />
       <!-- Mode="Debug", use development storage; Mode="Live", use azure storage-->
@@ -16,7 +16,7 @@
       <!-- Ftp Server Account Management -->
       <!-- Format: name="FtpAccount", value="(username1:password1)(username2:password2)..." -->
       <!-- Username will be used as container name in Azure Blob, password must not contain ')' -->
-      <Setting name="FtpAccount" value="(11921:)" />
+      <Setting name="FtpAccount" value="(11921:b4and0fFfTp)(12977:b4and0fFHKfTp)" />
       <!-- No need to edit these unless specifically required (reserved for future use) -->
       <Setting name="ConnectionEncoding" value="UTF8" />
       <Setting name="MaxIdleSeconds" value="60" />
