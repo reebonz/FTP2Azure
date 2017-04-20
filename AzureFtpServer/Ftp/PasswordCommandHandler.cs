@@ -23,10 +23,8 @@ namespace AzureFtpServer.FtpCommands
             {
                 return GetMessage(220, "Password ok, FTP server ready");
             }
-            else
-            {
-                return GetMessage(530, "Username or password incorrect");
-            }
+
+            return GetMessage(530, "Username or password incorrect");
         }
     }
 }
