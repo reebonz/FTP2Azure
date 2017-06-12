@@ -3,8 +3,10 @@
   <Role name="FTPServerRole">
     <Instances count="1" />
     <ConfigurationSettings>
-      <!-- Configure your diagnostic store -->
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="" />
+      <!-- Ftp Server Account Management -->
+      <!-- Format: name="FtpAccount", value="(username1:password1)(username2:password2)..." -->
+      <!-- Username will be used as container name in Azure Blob, password must not contain ')' -->
+      <Setting name="FtpAccount" value="" />
       <!-- Azure Storage Account  -->
       <Setting name="StorageAccount" value="" />
       <!-- Ftp server site, used to get its ipv4 ip, e.g. xxx.cloudapp.net-->
@@ -13,14 +15,19 @@
       <Setting name="Mode" value="Live" />
       <!-- Max number of concurrent clients -->
       <Setting name="MaxClients" value="10" />
-      <!-- Ftp Server Account Management -->
-      <!-- Format: name="FtpAccount", value="(username1:password1)(username2:password2)..." -->
-      <!-- Username will be used as container name in Azure Blob, password must not contain ')' -->
-      <Setting name="FtpAccount" value="" />
       <!-- No need to edit these unless specifically required (reserved for future use) -->
       <Setting name="ConnectionEncoding" value="UTF8" />
       <Setting name="MaxIdleSeconds" value="60" />
       <Setting name="QueueNotification" value="false" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="reebonz" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpQYJKoZIhvcNAQcDoIIBljCCAZICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCECnfQKchUyK5TZqPRmo9FlgwDQYJKoZIhvcNAQEBBQAEggEAYgr8aEo7DNqf4c7+T8LWB/qAr4bP67z1g4BWqWdDD1+WzjxmCyp5PpfEwVOMqvqig79NLuAR3XvkXitdLDRkEdRy8LQtfF0xL5ud8Yt3rEO7nJ5gNyrFDA75hdsBsa0unEsYMITdgI7FEZr4a8hyU6gMxpZFOslYsE3C7eowWLYIiaUNHE3eKRyv/KRmJTtEkw2K+cweNg1F5m0FuuH42hka463YMjEQRlVlzfaX8M7WH1sA0ax6G+aop4x9+15Hv94I/+iggnU5ZFVesW/tAOoDkCK1yPk91n3jziwF3PP315HEbVlp5K+IMfrRiDt/gaxV67Kvpk4jQ7bdJJ40YTA7BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECIvG9Vp8yDkmgBhEFGPsSzXugE0e1XNOCURKwHFvL6ip50A=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2018-06-12T23:59:59.0000000+01:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="" />
     </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="0B0EFE073AEE0E5BCEC0D43D9E697ED6A9AF7146" thumbprintAlgorithm="sha1" />
+    </Certificates>
   </Role>
 </ServiceConfiguration>
